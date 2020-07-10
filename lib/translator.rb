@@ -34,7 +34,7 @@ end
 
 def get_english_meaning(path, japanese_emoticon)
   library = load_library(path)
-  output = nil
+  update = nil
   library['get_meaning'].each do |value, meaning |
     if value == japanese_emoticon
       output = meaning
