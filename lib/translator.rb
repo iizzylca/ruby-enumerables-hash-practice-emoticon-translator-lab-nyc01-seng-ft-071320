@@ -7,7 +7,7 @@ def load_library(path)
   library.each do |name, values|  # meaning= "surprised"   # value= [":o", "o_O"]  <-(e,j)
     update['get_name'][values[1]] = name
     update['get_emoticon'][values[0]] = values[1]
-    #binding.pry
+    binding.pry
   end
   update
 end
