@@ -28,7 +28,7 @@ def get_japanese_emoticon(path, english_emoticon)
   if update == nil
     return "Sorry, that emoticon was not found"
   else
-    return output
+    return update
   end
 end
 
