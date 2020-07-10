@@ -2,27 +2,35 @@ require 'yaml'
 require 'pry'
 
 def load_library(path)
-  emoticons = YAML.load_file(path)
-  new_emoticon = {'strip_meaning' => {}, 'strip_value' => {} }
+  library = YAML.load_file(path)
+  #binding.pry
+  emoticon_lib = {'get_meaning'  => {},
+                    'get_emoticon' => {} }
 
-  emoticons.each do |meaning , value|
-    english_value = value[0]
-    japanese_value = value[1]
-    binding.pry
-    new_emoticon['strip_meaning'][japanese_value] = meaning
-    mew_emoticon['string_value'][english] = japanese
-
+  library.each do |meaning, values|  # meaning= "surprised"   # value= [":o", "o_O"]  <-(e,j)
+    english = values[0]
+    japanese = values[1]
+    emoticon_lib['get_meaning'][japanese] = meaning
+    emoticon_lib['get_emoticon'][english] = japanese
+    #binding.pry
   end
-
-
-  end
-
-
-
-def get_japanese_emoticon
-  # code goes here
+  emoticon_lib
 end
 
-def get_english_meaning
-  # code goes here
+def get_japanese_emoticon(path, english_emoticon)
+  library = load_library(path)
+
+
+end
+
+def get_english_meaning(path, japanese_emoticon)
+  library = load_library(path)
+  output = nil
+  library['get_meaning'].each do |value, meaning |
+    if value == japanese_emoticon
+      output = meaning
+      binding.pry
+    end
+  end
+  #binding.pry
 end
