@@ -43,8 +43,4 @@ def get_english_meaning(path, japanese_emoticon)
     return update
   end
 end
-#binding.pry
-japanese_test = get_japanese_emoticon(path, english_emoticon)
-english_test = get_english_meaning(path, japanese_emoticon)
-p japanese_test
-p english_test
+binding.pry
