@@ -19,7 +19,7 @@ end
 
 def get_japanese_emoticon(path, english_emoticon)
   library = load_library(path)
-  output = nil
+  update = nil
   library['get_emoticon'].each do |english, japanese|
     if english == english_emoticon
       output = japanese
