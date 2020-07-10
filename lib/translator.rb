@@ -29,7 +29,7 @@ end
 
 
 
-def get_english_meaning	def get_english_meaning(path, emoticon)
+def get_english_meaning(path, emoticon)
   # code goes here	  emoticon_hash = load_library(path)
   result = emoticon_hash["get_meaning"][emoticon]
   if result == nil
