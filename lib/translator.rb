@@ -25,7 +25,7 @@ def get_japanese_emoticon(path, english_emoticon)
       output = japanese
     end
   end
-
+  if output == nil
 
 end
 
