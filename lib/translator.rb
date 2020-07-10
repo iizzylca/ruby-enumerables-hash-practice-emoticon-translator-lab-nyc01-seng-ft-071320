@@ -39,5 +39,4 @@ def get_english_meaning(path, emoticon)
       update = name
     end
   end
-
 end
