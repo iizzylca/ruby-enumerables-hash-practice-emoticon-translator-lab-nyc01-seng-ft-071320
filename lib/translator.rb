@@ -2,7 +2,7 @@ require 'yaml'
 require 'pry'
 
 def load_library(path)
-  update = {'get_name'=> {:english}, 'get_emoticon' => {:japanese => " "} }
+  update = {'get_name'=> {:english => " "}, 'get_emoticon' => {:japanese => " "} }
   library = YAML.load_file(path)
   library.each do |names, values|
     update['get_name'][values[1]] = names
