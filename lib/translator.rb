@@ -33,7 +33,7 @@ end
 
 def get_english_meaning(path, emoticon)
   library = load_library(path)
-  library[names].each do |name, value|
+  library.each do |name, value|
   binding.pry
   end
 end
