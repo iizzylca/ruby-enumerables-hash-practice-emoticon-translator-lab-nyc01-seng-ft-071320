@@ -10,7 +10,7 @@ def load_library(path)
   library.each do |meaning, values|  # meaning= "surprised"   # value= [":o", "o_O"]  <-(e,j)
     english = values[0]
     japanese = values[1]
-    emoticon_lib['get_meaning'][japanese] = meaning
+    !emoticon_lib['get_meaning'][japanese] = meaning
     emoticon_lib['get_emoticon'][english] = japanese
     #binding.pry
   end
