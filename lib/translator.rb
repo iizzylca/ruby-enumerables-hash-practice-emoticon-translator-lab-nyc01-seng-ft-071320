@@ -6,8 +6,8 @@ def load_library(path)
   update = {}
 
   library.each do |names,values|
-    update[key] = {}
-    update[key][:english] = value[0]
+    update[names] = {}
+    update[names][:english] = value[0]
     update[key][:japanese] = value[1]
   end
   update
