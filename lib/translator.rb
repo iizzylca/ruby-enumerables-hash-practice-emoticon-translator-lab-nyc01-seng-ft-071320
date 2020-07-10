@@ -4,7 +4,7 @@ require 'pry'
 def load_library(path)
   update = {'get_name'=> {}, 'get_emoticon' => {} }
   library = YAML.load_file(path)
-  library.each do |names, values|  # meaning= "surprised"   # value= [":o", "o_O"]  <-(e,j)
+  library.each do |names, values|  
     update['get_name'][values[1]] = names
     update['get_emoticon'][values[0]] = values[1]
     #binding.pry
