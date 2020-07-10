@@ -15,7 +15,7 @@ def load_library(path)
   #binding.pry
 end
 
-def get_japanese_emoticon(path, english_emoticon)
+def get_japanese_emoticon(path, emoticon)
   library = load_library(path)
   update = nil
   library['get_emoticon'].each do |english, japanese|
