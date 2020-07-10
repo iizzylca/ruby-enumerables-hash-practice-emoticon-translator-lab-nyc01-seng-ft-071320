@@ -37,6 +37,7 @@ def get_english_meaning(path, emoticon)
   library.each do |name, value|
     if name == emoticon
       update = name
+      binding.pry
     end
   end
 end
