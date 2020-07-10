@@ -45,5 +45,4 @@ def get_english_meaning(path, japanese_emoticon)
   else
     return output
   end
-
 end
