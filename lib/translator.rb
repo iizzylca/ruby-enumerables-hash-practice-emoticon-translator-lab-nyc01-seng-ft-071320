@@ -2,7 +2,7 @@ require 'yaml'
 require 'pry'
 
 def load_library(path)
-  library = YAML.load_file(file_path)
+  library = YAML.load_file(path)
   update = {}
 
   library.each do |names,values|
