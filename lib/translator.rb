@@ -40,7 +40,7 @@ def get_english_meaning(path, japanese_emoticon)
       update = meaning
     end
   end
-  if output == nil
+  if update == nil
     return "Sorry, that emoticon was not found"
   else
     return output
