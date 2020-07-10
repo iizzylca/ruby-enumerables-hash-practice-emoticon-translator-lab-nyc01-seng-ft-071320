@@ -42,12 +42,7 @@ help translate emoticons.
    `load_library` would be expected to return the following data structure:
 
    ```rb
-   {
-      'happy' => {
-         :english => ":)",
-         :japanese => "(＾ｖ＾)"
-      }
-   }
+   {'happy' => {:english => ":)", :japanese => "(＾ｖ＾)"}}
    ```
 
    For reference, here is the full list of emoticons stored in `lib/emoticons.yml`
