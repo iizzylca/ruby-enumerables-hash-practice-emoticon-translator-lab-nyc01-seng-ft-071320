@@ -37,5 +37,4 @@ def get_english_meaning(path, japanese_emoticon)
     #binding.pry
     return output
   end
-
 end
