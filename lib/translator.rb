@@ -5,7 +5,7 @@ def load_library(path)
   library = YAML.load_file(file_path)
   update = {}
 
-  emoticons.each do |key,value|
+  library.each do |key,value|
     new_hash[key] = {}
     new_hash[key][:english] = value[0]
     new_hash[key][:japanese] = value[1]
