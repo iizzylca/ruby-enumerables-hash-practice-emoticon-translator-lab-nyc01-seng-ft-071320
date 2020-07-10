@@ -33,7 +33,7 @@ def get_english_meaning(path, japanese_emoticon)
     end
   end
   if output == nil
-    return ""Sorry, that emoticon was not found""
+    return "Sorry, that emoticon was not found"
   end
   #binding.pry
 end
