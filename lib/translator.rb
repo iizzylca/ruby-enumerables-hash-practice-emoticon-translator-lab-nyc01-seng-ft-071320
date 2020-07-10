@@ -19,6 +19,7 @@ end
 
 def get_japanese_emoticon(path, english_emoticon)
   library = load_library(path)
+  output = nil
 
 
 end
