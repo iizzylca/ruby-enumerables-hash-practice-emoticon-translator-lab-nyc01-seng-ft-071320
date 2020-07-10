@@ -7,6 +7,7 @@ def load_library(path)
   library.each do |names, values|
     update['get_name'][values[1]] = names
     update['get_emoticon'][values[0]] = values[1]
+    
     #binding.pry
   end
   update
