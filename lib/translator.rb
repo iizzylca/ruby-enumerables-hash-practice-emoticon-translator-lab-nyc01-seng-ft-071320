@@ -21,6 +21,7 @@ def get_japanese_emoticon(path, english_emoticon)
   library = load_library(path)
   output = nil
   library['get_emoticon'].each do |english, japanese|
+    
 
 
 end
