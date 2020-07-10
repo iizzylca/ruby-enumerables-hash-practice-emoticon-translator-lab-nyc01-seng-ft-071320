@@ -6,7 +6,7 @@ def load_library(path)
   #binding.pry
   update = {'get_meaning'=> {}, 'get_emoticon' => {} }
   library.each do |meaning, values|  # meaning= "surprised"   # value= [":o", "o_O"]  <-(e,j)
-    update['get_meaning'][japanese[1]] = meaning
+    update['get_meaning'][japanese[1] = meaning
     update['get_emoticon'][english] = japanese
     #binding.pry
   end
