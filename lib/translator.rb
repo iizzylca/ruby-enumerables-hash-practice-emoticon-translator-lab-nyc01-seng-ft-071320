@@ -2,9 +2,8 @@ require 'yaml'
 require 'pry'
 
 def load_library(path)
-  library = YAML.load_file(path)
-  #binding.pry
   update = {'get_meaning'=> {}, 'get_emoticon' => {} }
+  library = YAML.load_file(path)
   library.each do |meaning, values|  # meaning= "surprised"   # value= [":o", "o_O"]  <-(e,j)
     update['get_meaning'][values[1]] = meaning
     update['get_emoticon'][values[0]] = values[1]
