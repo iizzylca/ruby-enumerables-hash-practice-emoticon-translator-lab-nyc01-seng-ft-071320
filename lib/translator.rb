@@ -7,7 +7,7 @@ def load_library(path)
 
   library.each do |key,value|
     update[key] = {}
-    new_hash[key][:english] = value[0]
+    update[key][:english] = value[0]
     new_hash[key][:japanese] = value[1]
   end
 
