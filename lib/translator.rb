@@ -14,7 +14,7 @@ def load_library(path)
     update['get_emoticon'][english] = japanese
     #binding.pry
   end
-  emoticon_lib
+  update
 end
 
 def get_japanese_emoticon(path, english_emoticon)
