@@ -8,7 +8,7 @@ def load_library(path)
   library.each do |meaning, values|  # meaning= "surprised"   # value= [":o", "o_O"]  <-(e,j)
     update['get_meaning'][values[1]] = meaning
     update['get_emoticon'][values[0]] = values
-    #binding.pry
+    binding.pry
   end
   update
 end
