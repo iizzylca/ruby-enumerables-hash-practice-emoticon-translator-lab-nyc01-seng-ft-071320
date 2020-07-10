@@ -2,8 +2,8 @@ require 'yaml'
 require 'pry'
 
 def load_library(path)
-  emoticons = YAML.load_file(file_path)
-  new_hash = {}
+  library = YAML.load_file(file_path)
+  update = {}
 
   emoticons.each do |key,value|
     new_hash[key] = {}
