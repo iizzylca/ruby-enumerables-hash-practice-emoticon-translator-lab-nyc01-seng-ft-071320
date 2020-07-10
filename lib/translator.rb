@@ -33,7 +33,7 @@ def get_english_meaning(path, japanese_emoticon)
   library['get_name'].each do |value, name|
     #binding.pry
     if value == japanese_emoticon
-      update = meaning
+      update = name
     end
   end
   if update == nil
