@@ -1,45 +1,31 @@
 require 'yaml'
 require 'pry'
 
-def load_library(path)
-  update = {'get_name'=> {}, 'get_emoticon' => {} }
-  library = YAML.load_file(path)
-  library.each do |names, values|
-    update['get_name'][values[1]] = names
-    update['get_emoticon'][values[0]] = values[1]
-    #binding.pry
+def load_library(emoticon_file)
+  # code goes here	  emoticons = YAML.load_file('./lib/emoticons.yml')
+
+  emoticon_lib = {'get_meaning'  => {},
+                  'get_emoticon' => {} }
+
+  emoticons.each do |meaning, value|  # meaning= "surprised"   # value= [":o", "o_O"]  <-(e,j)
+    english = value[0]
+    japanese = value[1]
+    emoticon_lib['get_meaning'][japanese] = meaning
+    emoticon_lib['get_emoticon'][english] = japanese
   end
-  update
+  emoticon_lib
 end
 
-def get_japanese_emoticon(path, english_emoticon)
-  library = load_library(path)
-  update = nil
-  library['get_emoticon'].each do |english, japanese|
-  #binding.pry
-    if english_emoticon == english
-      update = japanese
-    end
-  end
-  if update == nil
-    return "Sorry, that emoticon was not found"
-  else
-    return update
-  end
+
+def get_japanese_emoticon(emoticon_file, emoticon)
+  emoticon_lib = load_library(emoticon_file)
+  japanese_emoticon = emoticon_lib['get_emoticon'][emoticon]
+  japanese_emoticon ? japanese_emoticon : 'Sorry, that emoticon was not found'
 end
 
-def get_english_meaning(path, japanese_emoticon)
-  library = load_library(path)
-  update = nil
-  library['get_name'].each do |value, name|
-    #binding.pry
-    if value == japanese_emoticon
-      update = name
-    end
-  end
-  if update == nil
-    return "Sorry, that emoticon was not found"
-  else
-    return update
-  end
+
+def get_english_meaning(emoticon_file, emoticon)
+  # code goes here	  emoticon_lib = load_library(emoticon_file)
+  english_meaning = emoticon_lib['get_meaning'][emoticon]
+  english_meaning ? english_meaning : 'Sorry, that emoticon was not found'
 end
