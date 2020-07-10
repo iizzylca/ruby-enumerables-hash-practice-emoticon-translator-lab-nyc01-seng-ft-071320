@@ -9,6 +9,7 @@ def load_library(path)
     update[names] = {}
     update[names][:english] = values[0]
     update[names][:japanese] = values[1]
+    binding.pry
   end
   update
 end
