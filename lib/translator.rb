@@ -10,8 +10,7 @@ def load_library(path)
     update[key][:english] = value[0]
     update[key][:japanese] = value[1]
   end
-
-  new_hash
+  update
 end
 
 def get_japanese_emoticon(path, english_emoticon)
