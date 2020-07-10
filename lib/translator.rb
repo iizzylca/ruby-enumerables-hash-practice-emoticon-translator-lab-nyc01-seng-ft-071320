@@ -9,10 +9,10 @@ def load_library(path)
     update[names] = {}
     update[names][:english] = values[0]
     update[names][:japanese] = values[1]
-    #binding.pry
+    binding.pry
   end
   update
-  binding.pry
+  #binding.pry
 end
 
 def get_japanese_emoticon(path, english_emoticon)
