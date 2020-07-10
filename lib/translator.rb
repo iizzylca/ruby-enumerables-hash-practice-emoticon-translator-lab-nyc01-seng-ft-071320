@@ -13,7 +13,7 @@ def load_library(path)
 end
 
 def get_japanese_emoticon(path, english_emoticon)
-
+  binding.pry
   library = load_library(path)
   update = nil
   library['get_emoticon'].each do |english, japanese|
