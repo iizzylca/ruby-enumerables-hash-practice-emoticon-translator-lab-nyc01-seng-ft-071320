@@ -1,5 +1,5 @@
 require 'yaml'
-require 'pry'
+#require 'pry'
 
 def load_library(path)
   update = {'get_name'=> {}, 'get_emoticon' => {} }
