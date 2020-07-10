@@ -31,7 +31,7 @@ def get_japanese_emoticon(path, english_emoticon)
   end
 end
 
-def get_english_meaning(path, japanese_emoticon)
+def get_english_meaning(path, emoticon)
   library = load_library(path)
   update = nil
   library['get_name'].each do |value, name|
