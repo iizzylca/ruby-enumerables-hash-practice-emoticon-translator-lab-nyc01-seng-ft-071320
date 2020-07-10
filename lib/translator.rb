@@ -11,7 +11,7 @@ def load_library(path)
     english = values[0]
     japanese = values[1]
     response['get_meaning'][japanese] = meaning
-    emoticon_lib['get_emoticon'][english] = japanese
+    response['get_emoticon'][english] = japanese
     #binding.pry
   end
   emoticon_lib
