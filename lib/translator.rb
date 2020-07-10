@@ -40,5 +40,4 @@ def get_english_meaning(path, emoticon)
     end
   end
 
-  #binding.pry
 end
