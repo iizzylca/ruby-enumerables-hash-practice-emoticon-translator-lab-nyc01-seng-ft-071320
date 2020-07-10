@@ -24,6 +24,7 @@ def get_japanese_emoticon(path, english_emoticon)
     if english == english_emoticon
       output = japanese
     end
+  end
 
 
 end
