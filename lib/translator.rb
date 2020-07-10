@@ -39,6 +39,6 @@ def get_english_meaning(path, emoticon)
       update = name
       binding.pry
     end
-    update
+  update
   end
 end
