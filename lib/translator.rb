@@ -1,5 +1,5 @@
 require 'yaml'
-#require 'pry'
+require 'pry'
 
 def load_library(path)
   update = {'get_name'=> {}, 'get_emoticon' => {} }
@@ -13,6 +13,7 @@ def load_library(path)
 end
 
 def get_japanese_emoticon(path, english_emoticon)
+
   library = load_library(path)
   update = nil
   library['get_emoticon'].each do |english, japanese|
