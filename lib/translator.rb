@@ -38,6 +38,5 @@ def get_english_meaning(path, emoticon)
     if value == emoticon
       binding.pry
     end
-  update
   end
 end
